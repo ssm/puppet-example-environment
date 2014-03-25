@@ -1,0 +1,8 @@
+This repository is for the puppet environments "example_*", an example puppet
+environment with multiple uses:
+
+* A source for "r10k", when deploying this on a live puppet master
+
+* Unit tests using "rspec-puppet"
+
+* Acceptance tests using "serverspec" and "vagrant"
