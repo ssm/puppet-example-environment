@@ -1,5 +1,14 @@
 # This profile implements a running webserver, using "apache httpd"
 class profile::webserver {
   include apache
-  apache::vhost { 'example.com': }
+
+  file { '/srv/www':
+    ensure  => directory,
+    recurse => true,
+    purge   => true,
+  }
+
+  apache::vhost { 'example.com':
+    docroot => '/srv/www/example.com',
+  }
 }
