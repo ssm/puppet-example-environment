@@ -1,0 +1,2 @@
+---
+apache::purge_configs: true
