@@ -45,8 +45,9 @@ install it.
 2. Install a vagrant box
 ------------------------
 
-serverspec/Vagrantfile needs a box named "default".  Choose any operating
-system, as long as it is supported by the modules used in this environment.
+serverspec/Vagrantfile needs a box named "default", which already has "puppet"
+installed.  Choose any operating system, as long as it is supported by the
+modules used in this environment.
 
     vagrant box add --name default \
     http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
