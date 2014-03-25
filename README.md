@@ -7,6 +7,13 @@ environment with multiple uses:
 
 * Acceptance tests using "serverspec" and "vagrant"
 
+Usage
+=====
+
+Run "rake serverspec" to provision a vagrant instance, install the
+"role::webserver" role in this environment, and run "serverspec" to check the
+result.
+
 Dependencies
 ============
 
