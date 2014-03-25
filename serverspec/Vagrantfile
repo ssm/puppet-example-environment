@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # Bootstrap a puppet environment
+  config.vm.provision "puppet" do |puppet|
+    puppet.manifest_file = "bootstrap.pp"
+  end
+
+  # Provisioning using the puppet environment
+  config.vm.provision "puppet" do |puppet|
+    puppet.manifest_file = "provision.pp"
+    puppet.options       = '--modulepath /srv/puppet/env/puppetmaster_master/design:/srv/puppet/env/puppetmaster_master/modules'
+  end
+
+end
