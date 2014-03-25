@@ -22,16 +22,19 @@ tests, and "vagrant" for a virtual server deployment. By default, "vagrant"
 uses "virtualbox" from Oracle, but there are vmware and lxc backends available.
 Installing these is outside the scope of this example.
 
+Modules are fetched on the host (not the guest) by "librarian-puppet".
+
 1.1 On Debian
 -------------
 
-    apt-get install ruby-rspec-puppet ruby-serverspec vagrant virtualbox
+    apt-get install ruby-rspec-puppet ruby-serverspec librarian-puppet vagrant virtualbox
 
 1.2 On other operating systems
 ------------------------------
 
     gem install rspec-puppet
     gem install serverspec
+    gem install librarian-puppet
 
 Get "vagrant" for your operating system from http://www.vagrantup.com/ and
 install it
